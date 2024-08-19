@@ -152,7 +152,7 @@ function App() {
           </div>
         </div>
 
-        <table className="max-w-md w-full mt-4 bg-card shadow-lg rounded-lg">
+        <table className="max-w-md w-full mt-4 bg-card shadow-lg rounded-lg overflow-x-auto">
           <thead>
             <tr className="bg-gray-900 text-white">
               <th className="px-4 py-2 text-left">Note</th>
@@ -161,8 +161,10 @@ function App() {
           </thead>
           <tbody>
             {notes.map((note, id) => (
-              <tr key={id}>
-                <td className="px-4 py-2 whitespace-nowrap">{note.note}</td>
+              <tr key={id} className="border-b border-gray-200">
+                <td className="px-4 py-2 whitespace-nowrap text-sm">
+                  {note.note}
+                </td>
                 <td className="px-4 py-2">
                   <div className="flex justify-end gap-4">
                     <button
