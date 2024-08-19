@@ -152,7 +152,7 @@ function App() {
           </div>
         </div>
 
-        <div className="overflow-x-auto bg-white mt-4 p-5 shadow-lg rounded-lg">
+        <div className="overflow-x-auto bg-white mt-4 p-5 shadow-lg rounded-lg mx-10">
           <table className="w-full max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mt-4 ">
             <thead>
               <tr className="bg-gray-900 text-white">
