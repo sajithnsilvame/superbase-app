@@ -152,22 +152,26 @@ function App() {
           </div>
         </div>
 
-        <div className="overflow-x-auto bg-white mt-4 p-5 shadow-lg rounded-lg mx-10">
-          <table className="w-full max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mt-4 ">
+        <div className="overflow-x-auto">
+          <table className="w-full max-w-md mx-auto mt-4 bg-card shadow-lg rounded-lg">
             <thead>
               <tr className="bg-gray-900 text-white">
-                <th className="px-4 py-2 text-left">Note</th>
-                <th className="px-4 py-2 text-right">Actions</th>
+                <th className="px-4 py-3 text-left text-sm sm:text-base">
+                  Note
+                </th>
+                <th className="px-4 py-3 text-right text-sm sm:text-base">
+                  Actions
+                </th>
               </tr>
             </thead>
             <tbody>
               {notes.map((note, id) => (
                 <tr key={id} className="border-b border-gray-200">
-                  <td className="px-4 py-2 whitespace-nowrap text-sm">
+                  <td className="px-4 py-3 text-sm sm:text-base whitespace-normal break-words">
                     {note.note}
                   </td>
-                  <td className="px-4 py-2">
-                    <div className="flex justify-end gap-4">
+                  <td className="px-4 py-3">
+                    <div className="flex justify-end gap-2 sm:gap-4">
                       <button
                         className="text-secondary hover:text-secondary/80"
                         title="Edit"
