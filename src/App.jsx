@@ -152,41 +152,43 @@ function App() {
           </div>
         </div>
 
-        <table className="max-w-md w-full mt-4 bg-card shadow-lg rounded-lg overflow-x-auto">
-          <thead>
-            <tr className="bg-gray-900 text-white">
-              <th className="px-4 py-2 text-left">Note</th>
-              <th className="px-4 py-2 text-right">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {notes.map((note, id) => (
-              <tr key={id} className="border-b border-gray-200">
-                <td className="px-4 py-2 whitespace-nowrap text-sm">
-                  {note.note}
-                </td>
-                <td className="px-4 py-2">
-                  <div className="flex justify-end gap-4">
-                    <button
-                      className="text-secondary hover:text-secondary/80"
-                      title="Edit"
-                      onClick={() => handleEdit(note.id, note.note)}
-                    >
-                      <FaEdit />
-                    </button>
-                    <button
-                      className="text-destructive hover:text-destructive/80"
-                      title="Delete"
-                      onClick={() => handleDelete(note.id)}
-                    >
-                      <FaTrash />
-                    </button>
-                  </div>
-                </td>
+        <div className="overflow-x-auto bg-white mt-4 p-5 shadow-lg rounded-lg">
+          <table className="w-full max-w-lg md:max-w-xl lg:max-w-2xl mx-auto mt-4 ">
+            <thead>
+              <tr className="bg-gray-900 text-white">
+                <th className="px-4 py-2 text-left">Note</th>
+                <th className="px-4 py-2 text-right">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {notes.map((note, id) => (
+                <tr key={id} className="border-b border-gray-200">
+                  <td className="px-4 py-2 whitespace-nowrap text-sm">
+                    {note.note}
+                  </td>
+                  <td className="px-4 py-2">
+                    <div className="flex justify-end gap-4">
+                      <button
+                        className="text-secondary hover:text-secondary/80"
+                        title="Edit"
+                        onClick={() => handleEdit(note.id, note.note)}
+                      >
+                        <FaEdit />
+                      </button>
+                      <button
+                        className="text-destructive hover:text-destructive/80"
+                        title="Delete"
+                        onClick={() => handleDelete(note.id)}
+                      >
+                        <FaTrash />
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );
